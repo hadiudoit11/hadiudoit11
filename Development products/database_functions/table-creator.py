@@ -1,3 +1,4 @@
+from google.cloud import storage
 import psycopg2
 
 DB_NAME = "jwjuiwdg"
