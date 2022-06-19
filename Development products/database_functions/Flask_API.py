@@ -1,6 +1,8 @@
+import os
 from flask import Flask, request, current_app
 from get_Database import runGetDatabase as runGetDatabase
 import psycopg2
+
 
 app = Flask(__name__)
 
@@ -30,4 +32,4 @@ def home():
         body_Response
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
