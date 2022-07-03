@@ -28,8 +28,7 @@ def runUpdated(id_Review, url_Review, body_Review, rating_Review, platform_Revie
     )
     VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s);
     """,
-    ([id_Review], [url_Review], [body_Review], [rating_Review], [platform_Review], [locationId_Review], [userId_Review], [brandId_Review], [timeCreated_Review])
-    )
+
     conn.commit()
     return\
         print("Table created sucessfully")
