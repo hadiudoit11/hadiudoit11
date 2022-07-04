@@ -24,7 +24,7 @@ body_Response = {
 }
 body_Response['body_Review'].append('{}'.format(database_Response))
 
-@app.route("/sms", methods=['GET','POST'])
+@app.route("/", methods=['GET','POST'])
 def home():
     #
     conn.commit()
@@ -32,4 +32,4 @@ def home():
         body_Response
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
